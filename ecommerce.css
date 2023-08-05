@@ -1,0 +1,453 @@
+ @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Kaushan+Script&family=Poppins:wght@200;300;400;500;600;700&family=Raleway:wght@300&display=swap');
+
+ /* font-family: 'Kablammo', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor:#A91b60;
+    --primary:#ff0080;
+    --secondary:#EC9EC0;
+    --ternary:#EBE0D0;
+    --black:rgba(0, 0 , 0, 0.8);
+    --white:#fff;
+}
+.navbar{
+    background-color: var(--ternary);
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px, 50px,  100px, -20px, rgba(0, 0, 0, 0.3) , 0px, 30px, 60px, -30px;
+}
+
+.logoContainer img{
+    width:100px;
+    object-fit: contain;
+}
+nav{
+    width:40%;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    font-size:1.1rem;
+    color:var(--mainColor);
+    font-family: 'Poppins', sans-serif;
+}
+.icons{
+    display: flex;
+}
+.icons .fas{
+    color:var(--mainColor);
+    margin-left: 1em;
+    font-size: 1.1rem ;
+}
+#menubar{
+    display: none;
+}
+
+/* media queries for navbar  */
+
+@media screen and (max-width:990px){
+    html{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:760px){
+    html{
+        font-size: 14px;
+    }
+    .navbar{
+        max-width: 670px;
+    }
+    nav ul{
+        background-color: #A91b60;
+        position: absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        display: block;
+        text-align: center;
+        padding:1em;
+        display: none;
+    }
+    nav li{
+        margin-bottom: 1em ;
+    }
+    nav a{
+        color: var(--ternary);
+        font-size:1.2em;
+    }
+    #menubar{ 
+        display: inline;
+    }
+}
+@media screen and (max-width:568px){
+    html{
+        font-size: 12px;
+    }
+    .logoContainer img{
+        width:80px;
+    }
+    .navbar{
+        max-width: 530px;
+    }
+}
+
+#wrapper{
+    margin:0 auto;
+    max-width: 1300px;
+}
+ /* section 1 starts here  */
+ .container{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin:0 1em;
+    width:100%;
+     
+ }
+ .content-box{
+    width:45%;
+    padding: 0.3em; 
+ }
+ .content-box h1{
+    font-size: 2.8rem;
+    font-family: 'Raleway', sans-serif;
+    color:var(--mainColor);
+ }
+ .shopping{
+    font-size: 3rem;
+    font-family: 'Kaushan Script', cursive;
+    /* if i dont give display property then margin widht height 
+    will not gonna work on inline element */
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+ }
+ .content-box p{
+    font-family: 'Poppins', sans-serif;
+    color:var(--black);
+    font-size: 0.9rem;
+    margin: 0.5em 0;
+ }
+
+ .imgContainer img{
+ max-width: 100%;
+ }
+ .btn{
+    width:35%;
+    padding:0.5em 1.3em;
+    font-size:1.1rem;
+    margin-top: 1.5em;
+    border:none;
+    outline:none;
+    background-color: var(--mainColor);
+    color: var(--ternary);
+ }
+
+ /* media queries for section 1 */
+   @media screen  and (max-width:990px){
+    .container{
+        max-width: 950px;
+   }
+   }
+   @media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .content-box{
+        width: 85%;
+    }
+    .container h1{
+        font-size: 2.2rem;
+        margin-top: .5em;
+    }
+    .shopping{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .btn{
+        width:25%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .imgContainer img{
+       max-width: 80%;
+        /* see without giving display block . if u directly write margin 
+        then image will not come in center because image are inline object; */
+        display: block;
+        margin: 0 auto ;
+     }
+   }
+   @media screen and (max-width:600px){
+ .btn{
+    width:30%;
+ }
+   }
+   @media screen and (max-width:450px){
+    html{
+        font-size: 12px;
+    }
+    .container{
+        flex-direction: column-reverse;
+   }
+   .container h1{
+    text-align: center;
+   }
+   .btn{
+    width: 40%;
+   }
+}
+
+/* section 2 starts here  */
+
+.promotion{
+    justify-content: space-between;
+    margin-top: 1em;
+    background-image: linear-gradient(var(--secondary), var(--ternary), var(--secondary));
+}
+.cards{
+    background-color:white;
+    margin-top: 1.1rem;
+    width:40%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 3px grey;
+}
+.cards img{
+    width:50%;
+}
+.cardContent{
+    padding: 1em;
+    width:100%;
+    text-align: center;
+}
+.cardContent h1{
+    font-family: 'Kaushan Script', cursive;
+}
+.btnall{
+    width: 80%;
+}
+
+/* media queries for section 2 */
+
+ @media screen and (max-width:990px){
+    .btnall{
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .cardContent h1{
+        font-size: 1.5rem;
+    }
+}
+ @media screen and (max-width:768px){
+  .cards{
+    width:90%;
+  }
+  .btnall{
+    width:35%;
+  }
+  .cardContent{
+    text-align: right;
+  }
+  .cardImg{
+    width:80%;
+  }
+}
+@media screen and (max-width:568px){
+    .cardImg{
+        width:50%;
+      }
+      .btnall{
+        width:50%;
+      }
+}
+@media screen and (max-width:450px){
+    .btnall{
+        width:100%;
+    }
+}
+
+  /* section 3 starts here  */
+
+  .title h1{
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 0.5em 0;
+    font-family: 'Raleway', sans-serif;
+  }
+  .productCards{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em 0;
+  }
+  .productCard{
+  width:22%;
+  padding: 0 1em;
+  box-shadow: 4px 4px 20px -5px var(--secondary);
+  margin-bottom: 1.5em;
+  }
+  .productCard img{
+   width:90%;
+   margin: 0 auto;
+   display: block;
+   height: 300px;
+   object-fit: contain;
+  }
+
+  .productCard h2{
+   font-size: 1.8rem;
+   font-family: 'Kaushan Script', cursive;
+   color:var(--mainColor);
+  }
+  .actualprice{
+    margin: .5em, 0;
+    font-size: 1.1rem;
+    font-weight: bold ;
+  }
+  .price{
+    text-decoration: line-through;
+    /* since by default display is inline so to add padding
+     and  margin we need to use dispaly block */
+    display: inline-block;
+    margin-right: 0.5em;
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  .rating{
+    font-size: 1rem;
+    color:var(--mainColor);
+    margin:0.5em 0; 
+  }
+/* 
+  media queries for section 3 */
+  @media screen and (max-width:990px){
+    .productCard{
+        width:30%; 
+    }
+  }
+  @media screen and (max-width:768px){
+      .productCard{
+        width:40%;
+      }
+  }
+
+  @media screen and (max-width:568px){
+    .productCard{
+      width:80%;
+    }
+    .title h1{
+        font-size: 2.5rem;
+    } 
+    .productCard img{
+        height: 200px;
+       }
+}
+.serviceText{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.promotio{
+    width:100%;
+    height:35px;
+    background-image: linear-gradient(var(--secondary), var(--ternary), var(--secondary));
+    }
+    /* section 7 starts here  */
+    .brands{
+        flex-wrap: wrap;
+    }
+    .brands img{
+        width: 100px; 
+        margin-bottom: 1em;
+    }
+
+    @media screen and (max-width:768px){
+        .brands{
+            flex-direction: row; 
+        }
+    }
+    
+    @media screen and (max-width:568px){
+        .brands{
+            flex-direction: column ; 
+        }
+    }
+
+/* footer starts here  */
+.footer{
+    width:100%;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding :1.5rem;
+    flex-wrap: wrap;
+}
+.footerText{
+    width:20%;
+}
+.footerText p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+.footerText h2{
+    color:var(--mainColor);
+    margin-bottom: 0.3rem;
+}
+.fab{
+    font-size: 1.2rem;
+    margin-left: .8em;
+    margin-top: 1em;
+    text-shadow: -1px -1px var(--mainColor);
+    transition: transform 0.5s;
+}
+.fab:hover{
+    color:var(--mainColor);
+    text-shadow: -1px -1px var(--white);
+    transform: translateY(2px);
+}
+
+@media screen and (max-width:768px){
+     .footer{
+        flex-direction: row;
+     }
+     .footerText{
+        width:40%;
+        margin-bottom: 1em;
+     }
+     .footerText h2{
+        font-size: 1.2rem;
+     }
+}
+@media screen and (max-width:568px){
+     .footer{
+        text-align: center;
+     }
+     .footerText{
+        width:80%;
+        margin-bottom: 1em;
+     }
+}
